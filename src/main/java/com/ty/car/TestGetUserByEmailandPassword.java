@@ -22,10 +22,10 @@ public class TestGetUserByEmailandPassword {
 		
 		String sql = "SELECT u FROM User u WHERE u.name =?1 AND u.password = ?2";
 		
-	Query query = entityManager.createQuery(sql);
+	Query query = entityManager.createQuery(sql);//Hibernate takes the query and this method returns the query object
 	
-	query.setParameter(1, "karthik");
-	query.setParameter(2, "ghjk");
+	query.setParameter(1, "karthik");//here for the  ?1 we give the values
+	query.setParameter(2, "ghjk");//here for the  ?2 we give the values
 	
 	List<User> users = query.getResultList();
 	

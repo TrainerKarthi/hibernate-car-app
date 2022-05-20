@@ -14,7 +14,7 @@ public class Car {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column(unique = true)
+	@Column(unique = true,name = "ty_car_name")
 	private String name;
 
 	@Column(name = "ty_car_brand")
